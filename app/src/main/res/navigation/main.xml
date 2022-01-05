@@ -1,0 +1,37 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    app:startDestination="@id/menu_about">
+  
+    <fragment
+        android:id="@+id/menu_about"
+        android:name="com.pack.gallery.FragmentAbout"
+        android:label="fragment_about"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/menu_people"
+        android:name="com.pack.gallery.FragmentPeople"
+        android:label="fragment_people"
+        tools:layout="@layout/fragment_people" />
+    <fragment
+        android:id="@+id/menu_internal_folders"
+        android:name="com.pack.gallery.FragmentFolder"
+        android:label="fragment_folder"
+        tools:layout="@layout/fragment_folder" />
+    <fragment
+        android:id="@+id/menu_search"
+        android:name="com.pack.gallery.FragmentSearch"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" />
+    <fragment
+        android:id="@+id/menu_settings"
+        android:name="com.pack.gallery.FragmentSetting"
+        android:label="fragment_setting"
+        tools:layout="@layout/fragment_setting" />
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.pack.gallery.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+</navigation>

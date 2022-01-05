@@ -1,0 +1,33 @@
+    <menu xmlns:android="http://schemas.android.com/apk/res/android"
+      >
+    <item
+        android:id="@+id/menu_search"
+        android:icon="@drawable/search"
+        android:title="Search"
+        />
+    <item
+        android:id="@+id/menu_internal_folders"
+        android:icon="@drawable/folder"
+        android:title="internal Folders"
+        />
+    <item
+        android:icon="@drawable/setting"
+        android:id="@+id/menu_settings"
+        android:title="setting's"
+        />
+    <item
+        android:id="@+id/menu_people"
+        android:icon="@drawable/people"
+        android:title="People"
+        />
+           <item
+            android:id="@+id/menu_about"
+            android:icon="@drawable/about"
+            android:title="About"
+            />
+        <item
+            android:id="@+id/exit"
+            android:icon="@drawable/exit"
+            android:title="Exit"
+            />
+</menu>
