@@ -7,6 +7,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.GridView;
+
+import java.io.File;
+import java.util.ArrayList;
+
 /**
  * A simple {@link Fragment} subclass.
  * Use the {@link FragmentAbout#newInstance} factory method to
@@ -21,6 +25,8 @@ public class FragmentAbout extends Fragment {
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
+    ArrayList<File> imageList;
+    File[] imageFile;
     public FragmentAbout() {
         // Required empty public constructor
     }

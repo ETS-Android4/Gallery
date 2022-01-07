@@ -1,12 +1,17 @@
 package com.pack.gallery;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
 
+import android.provider.MediaStore;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -19,7 +24,9 @@ public class FragmentSetting extends Fragment {
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
-
+    protected Button camera_open_id;
+     protected View rootView;
+    protected  Intent intent;
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -58,7 +65,56 @@ public class FragmentSetting extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
+        rootView=inflater.inflate(R.layout.fragment_setting,container,false);
+        camera_open_id = (Button)rootView.findViewById(R.id.camera);
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_setting, container, false);
+        Button btn2,btn3,btn4;
+        btn2 = (Button)rootView.findViewById(R.id.button);//sort
+        btn3= (Button)rootView.findViewById(R.id.button2);//report an  error
+        btn4= (Button)rootView.findViewById(R.id.button3); //share
+        camera_open_id.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+                // Create the camera_intent ACTION_IMAGE_CAPTURE
+                // it will open the camera for capture the image
+               intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+                Toast.makeText(getActivity(),"camera access will open soon",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+        });
+        btn2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(getActivity(),"sort preference add soon",Toast.LENGTH_SHORT).show();
+                //startActivity(intent);
+            }
+        });
+        btn3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                Toast.makeText(getActivity(),"taking Report and shared on BUG Reference",Toast.LENGTH_SHORT).show();
+                //startActivity(intent);
+            }
+        });
+        btn4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+
+                intent.setAction(Intent.ACTION_SEND);
+                intent.putExtra(Intent.EXTRA_TEXT,
+                        "Hey check out my app at: https://play.google.com/store/apps/details?id=" + BuildConfig.APPLICATION_ID);
+               intent.setType("text/plain");
+                Toast.makeText(getActivity(),"Testing link open soon",Toast.LENGTH_SHORT).show();
+                startActivity(intent);
+            }
+
+        });
+
+        return rootView;
     }
 }

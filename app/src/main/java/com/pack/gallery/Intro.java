@@ -7,6 +7,7 @@ public class Intro  extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.intro);
+        setContentView(R.layout.activity_main);
+
     }
 }

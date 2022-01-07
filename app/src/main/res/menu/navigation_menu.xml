@@ -25,9 +25,5 @@
             android:icon="@drawable/about"
             android:title="About"
             />
-        <item
-            android:id="@+id/exit"
-            android:icon="@drawable/exit"
-            android:title="Exit"
-            />
+
 </menu>

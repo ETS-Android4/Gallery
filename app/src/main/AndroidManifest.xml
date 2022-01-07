@@ -11,11 +11,9 @@
         android:hardwareAccelerated="false"
         android:largeHeap="true"
         android:theme="@style/Theme.Gallery">
+<activity android:name=".FullView"></activity>
         <activity android:name=".Intro"
             android:exported="true"></activity>
-        <activity android:name=".AboutLoader"
-            />
-
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -25,6 +23,7 @@
             </intent-filter>
         </activity>
     </application>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
 
 </manifest>

@@ -8,12 +8,16 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.File;
+import java.util.ArrayList;
+
 public class AboutAdapter  extends BaseAdapter {
     private Context context;
     LayoutInflater inflater;
     String[] team_name;
     String[] id;
     int[] img_id;
+
     public AboutAdapter(Context c,String[] team_name,String[] id,int[] img_id){
         context =c;
         this.team_name = team_name;
@@ -52,4 +56,5 @@ public class AboutAdapter  extends BaseAdapter {
         about_hallticket.setText(id[position]);
         return convertView;
     }
+
 }

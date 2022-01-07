@@ -1,5 +1,7 @@
 package com.pack.gallery;
+import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
 import android.view.View.*;
 
@@ -23,14 +25,17 @@ public class MainActivity extends AppCompatActivity {
     public void onCreate(Bundle savedinstancestate) {
         super.onCreate(savedinstancestate);
         getSupportActionBar().hide();
-        //final DrawerLayout drawerlayout = findViewById(R.id.drawerLayout);
+      /*  new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                startActivity(new Intent(MainActivity.this,Intro.class));
+                finish();
+            }
+        },300); */
         setContentView(R.layout.activity_main);
-
-       // drawerlayout.openDrawer((GravityCompat.START));
         NavigationView navigationview = findViewById(R.id.navigationview);
         navigationview.setItemIconTintList(null);
         NavController navController = Navigation.findNavController(this, R.id.navHostFragment);
         NavigationUI.setupWithNavController(navigationview, navController);
-
-    }
+        }
 }

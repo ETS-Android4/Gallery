@@ -1,14 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentSetting">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="settings fragment" />
+        android:layout_gravity="center"
+        android:background="@drawable/background"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="SETTING'S"
+            app:layout_constraintBottom_toTopOf="@+id/camera"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif-black"
+            android:textSize="50sp"
+            android:textAlignment="center"
+            tools:layout_editor_absoluteX="0dp" />
+
+        <Button
+            android:id="@+id/camera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="camera"
+            android:icon="@drawable/cam"
+            android:textColor="@color/black"
+            android:background="@color/colorGreen"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:textFontWeight="@integer/config_navAnimTime"
+            android:textAlignment="center"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.379"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.934" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="28dp"
+            android:text="sort"
+            android:textColor="@color/black"
+            android:background="@color/colorGreen"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:textFontWeight="@integer/config_navAnimTime"
+            app:layout_constraintBottom_toTopOf="@+id/button2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:text="Report an error"
+            android:textColor="@color/black"
+            android:background="@color/colorGreen"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:textFontWeight="@integer/config_navAnimTime"
+            app:layout_constraintBottom_toTopOf="@+id/button3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="164dp"
+            android:text="share"
+            android:textColor="@color/black"
+            android:background="@color/colorGreen"
+            android:textSize="30dp"
+            android:textStyle="italic"
+            android:textFontWeight="@integer/config_navAnimTime"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.372"
+            app:layout_constraintStart_toStartOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </FrameLayout>

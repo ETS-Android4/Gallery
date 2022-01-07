@@ -36,6 +36,9 @@ dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
     //navigation component
     implementation 'androidx.navigation:navigation-fragment-ktx:2.2.0-rc03'
+
+    implementation 'com.skyfishjy.ripplebackground:library:1.0.1'
+    implementation 'com.github.uelordi01:Opencv-Android-3.3-gradle:1.1'
     implementation 'androidx.navigation:navigation-ui-ktx:2.2.0-rc03'
     implementation 'androidx.appcompat:appcompat:1.4.0'
     implementation 'com.google.android.material:material:1.4.0'
