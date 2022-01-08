@@ -63,14 +63,15 @@ public class FragmentAbout extends Fragment {
         // Inflate the layout for this fragment
         View rootView=inflater.inflate(R.layout.fragment_about,container,false);
         GridView gridview =(GridView)rootView.findViewById(R.id.grid_view_about);
-        String[] team_name ={"Banoth Srinivas","Vangeti chaithanya","Dubasi Divya","Pullakandam Sai Kumar","Narsimha"};
-        String[] id = { "19641A05M8","19641A05K2","19641A05J5","19641A05N2","19641A05M9"};
+        String[] team_name ={"Banoth Srinivas","Vangeti chaithanya","Dubasi Divya","Pullakandam Sai Kumar","Narsimha","Anakar Jalagam"};
+        String[] id = { "19641A05M8","19641A05K2","19641A05J5","19641A05N2","19641A05M9","19641A05G3"};
         int[] imageid ={
                 R.drawable.srinivas,
                 R.drawable.user,
                 R.drawable.divya,
                 R.drawable.saikumar,
-                R.drawable.user
+                R.drawable.user,
+                R.drawable.anakar
         };
         //AboutAdapter adapter=new AboutAdapter(getActivity(),team_name,id,imageid);
         gridview.setAdapter(new AboutAdapter(getActivity(), team_name,id,imageid));
